@@ -1,10 +1,8 @@
-import { useRef, useState, FormEvent } from 'react';
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 // import { ErrorMessage } from '@hookform/error-message';
 import { postSession } from '../../../../services/sessions';
-import ISession from '../../../../models/ISession';
 
 type Props = {
     id: number | string;

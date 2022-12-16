@@ -36,7 +36,7 @@ const WorkshopDetails = () => {
 
             helper();
         },
-        [] // on page load
+        [ id ] // on page load
     );
 
     return (

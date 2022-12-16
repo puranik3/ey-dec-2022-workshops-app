@@ -5,6 +5,7 @@ const useFetchData = <T>( fetch : () => Promise<T>, dependencies : any[] = [] ) 
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<Error | null>(null);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const fetchHelper = async () => {
         setLoading(true);
 
@@ -23,7 +24,8 @@ const useFetchData = <T>( fetch : () => Promise<T>, dependencies : any[] = [] ) 
         () => {
             fetchHelper();
         },
-        dependencies // dependencies array
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [ ...dependencies, fetchHelper ] // dependencies array
     );
 
     return {
