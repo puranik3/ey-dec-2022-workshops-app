@@ -36,7 +36,8 @@ const WorkshopDetails = () => {
 
             helper();
         },
-        [ id ] // on page load
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [] // on page load
     );
 
     return (

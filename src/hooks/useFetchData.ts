@@ -25,7 +25,7 @@ const useFetchData = <T>( fetch : () => Promise<T>, dependencies : any[] = [] ) 
             fetchHelper();
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        [ ...dependencies, fetchHelper ] // dependencies array
+        dependencies // dependencies array
     );
 
     return {
